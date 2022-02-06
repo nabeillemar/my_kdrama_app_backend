@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+action = Category.create(name: "Action")
+romance = Category.create(name: "Drama")
+gender_reversal = Category.create(name: "Gender Reversal")
+historical = Category.create(name: "Saguk (Historical)")
+time_travel = Category.create(name: "Time Travel")
+horror = Category.create(name: "Horror")
+professional = Category.create(name: "Professional")
+fantasy = Category.create(name: "Fantasy")
+family = Category.create(name: "Family")
+coming_of_age = Category.create(name: "Coming of Age")
+web = Category.create(name: "Web")
+melodrama = Category.create(name: "Melodrama")
+thriller = Category.create(name: "Thriller")
+lgbtq = Category.create(name: "LGBTQ+")
+
+
+
+
