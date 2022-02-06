@@ -23,5 +23,16 @@ thriller = Category.create(name: "Thriller")
 lgbtq = Category.create(name: "LGBTQ+")
 
 
+KDramas.create(title: "It's Okay to Not Be Okay", release_year: 2020, watched: "Yes", where_to_watch: "Netflix", cover_photo: "https://m.media-amazon.com/images/M/MV5BYTk0Nzk5ZWYtYTNlZi00YjBjLWJhYjctMWMwMmYyMDA5ZjJmXkEyXkFqcGdeQXVyNDY5MjMyNTg@._V1_.jpg", 
+    my_rating: 10, comment: "Love the show, so many twists I was glued to the tv." category_id: melodrama.id)
 
 
+
+t.string :title
+      t.integer :release_year
+      t.string :watched
+      t.string :where_to_watch
+      t.string :cover_photo
+      t.integer :my_rating
+      t.string :comment
+      t.integer :category_id
