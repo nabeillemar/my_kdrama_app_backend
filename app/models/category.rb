@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    # has_many :Kdramas
+    has_many :Kdramas
 end
