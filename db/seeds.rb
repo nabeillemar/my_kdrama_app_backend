@@ -25,4 +25,3 @@ lgbtq = Category.create(name: "LGBTQ+")
 
 KDrama.create(title: "It's Okay to Not Be Okay", release_year: 2020, watched: "Yes", where_to_watch: "Netflix", cover_photo: "https://m.media-amazon.com/images/M/MV5BYTk0Nzk5ZWYtYTNlZi00YjBjLWJhYjctMWMwMmYyMDA5ZjJmXkEyXkFqcGdeQXVyNDY5MjMyNTg@._V1_.jpg", 
     my_rating: 10, comment: "Love the show, so many twists I was glued to the tv.", category_id: melodrama.id)
-
