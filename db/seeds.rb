@@ -8,7 +8,7 @@
 
 
 action = Category.create(name: "Action")
-romance = Category.create(name: "Drama")
+romance = Category.create(name: "Romance")
 gender_reversal = Category.create(name: "Gender Reversal")
 historical = Category.create(name: "Saguk (Historical)")
 time_travel = Category.create(name: "Time Travel")

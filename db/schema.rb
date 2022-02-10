@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_201358) do
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "category_id"
+    t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_k_dramas_on_category_id"
   end
 
