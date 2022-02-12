@@ -2,7 +2,7 @@ class Api::V1::KDramasController < ApplicationController
 
 
     def index #rendering all data of the kdramas in the form of JSON 
-        kdramas = KDrama.all
+        kdramas = KDrama.all # we don't need to use instance varaibles anymore because of .....
         #render json: kdramas #this shows you everything #array then the objects
         render json: KDramaSerializer.new(kdramas) #this adds the type, you have to add the attributes that you want to bring in #getting a data object that has an array, we have an attributes object that has an array, #we can restrict the data
     end
@@ -12,7 +12,7 @@ class Api::V1::KDramasController < ApplicationController
        if kdrama.save
         render json: syllabus, status: :accepted # if the instances is saved then render the data json if it saved sucessfully, status allows us to communicate with the client side 
        else
-        render json: {errors: kdrama.errors.full_messages}, status: :unprocessible_entity #if the instance doesn't save we can send this to the front end to the client (user side) we can display the full messages 
+        render json: {errors: kdrama.errors.full_messages}, status: :unprocessible_entity #if the instance doesn't save we can send this to the front end to the client (user side) we can display the full messages , need to see what these status come from and what they mean
        end 
     end 
 
