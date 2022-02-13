@@ -21,7 +21,7 @@ class Api::V1::KDramasController < ApplicationController
     private
 
     def kdrama_params # permit a parameter ... must be includes in the body of the POST or POST requests we will be making with JS fetch 
-        params.require(:kdrama).permit(:title, :release_year, :watched, :where_to_watch, :cover_photo, :my_rating, :comment, :category_id)
+        params.require(:k_dramas).permit(:title, :release_year, :watched, :where_to_watch, :cover_photo, :my_rating, :comment, :category_id)
     end 
 
 end
