@@ -18,6 +18,31 @@ class Api::V1::KDramasController < ApplicationController
     end 
 
 
+    def show
+        kdrama = KDrama.find_by(id: params[:id])
+        render json: KDramaSerializer.new(kdrama)
+    end
+
+    def update 
+        kdrama = KDrama.find_by(id: params[:id])
+        if kdrama.update(kdrama_params)
+          render json: KDramaSerializer.new(kdrama)
+        else
+            render json: {errors: kdrama.errors.full_messages}, status: :unprocessible_entity
+        end 
+    end 
+
+    def destroy
+        kdrama = KDrama.find_by(id: params[:id])
+        if kdrama.destroy
+          render json: { id: kdrama.id }
+        end
+    end
+    
+
+
+
+
 
     private
 
@@ -28,5 +53,7 @@ class Api::V1::KDramasController < ApplicationController
     def kdrama_params # permit a parameter ... must be includes in the body of the POST or POST requests we will be making with JS fetch 
         params.require(:k_drama).permit(:title, :release_year, :watched, :where_to_watch, :cover_photo, :my_rating, :comment, :category_id)
     end 
+
+   
 
 end
