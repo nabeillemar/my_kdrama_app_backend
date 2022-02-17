@@ -35,7 +35,7 @@ class Api::V1::KDramasController < ApplicationController
     def destroy
         kdrama = KDrama.find_by(id: params[:id])
         if kdrama.destroy
-          render json: { message: "kdrama deleted" }
+          render json: { id: kdrama.id }
         end
     end
     
