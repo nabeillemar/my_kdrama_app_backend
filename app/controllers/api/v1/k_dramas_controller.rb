@@ -26,9 +26,9 @@ class Api::V1::KDramasController < ApplicationController
     def update 
         kdrama = KDrama.find_by(id: params[:id])
         if kdrama.update(kdrama_params)
-          render json: KDramaSerializer.new(kdrama)
+          render json: KDramaSerializer.new(kdrama), status: :accepted
         else
-            render json: {errors: kdrama.errors.full_messages}, status: :unprocessible_entity
+            render json: {errors: kdrama.errors.full_messages}
         end 
     end 
 
